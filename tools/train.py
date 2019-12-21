@@ -57,7 +57,7 @@ def main():
         config, args.cfg, 'train') 
     """
     create_logger(cfg, cfg_name, phase='train')
-    
+    cfg为配置文件，cfg_name为输出结果所至文件的文件名
     """
 
     logger.info(pprint.pformat(args))
