@@ -46,15 +46,19 @@ def parse_args():
                         nargs=argparse.REMAINDER)
 
     args = parser.parse_args()
-    update_config(config, args)
+    update_config(config, args) #将命令行输入的参数更新到配置文件
 
     return args
 
 def main():
-    args = parse_args()
+    args = parse_args() #接收命令行参数
 
     logger, final_output_dir, tb_log_dir = create_logger(
-        config, args.cfg, 'train')
+        config, args.cfg, 'train') 
+    """
+    create_logger(cfg, cfg_name, phase='train')
+    
+    """
 
     logger.info(pprint.pformat(args))
     logger.info(config)
